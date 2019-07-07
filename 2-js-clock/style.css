@@ -1,0 +1,79 @@
+html {
+  background-image: linear-gradient(
+    to bottom,
+    #ff9671,
+    #e57b89,
+    #b56d97,
+    #7d6592,
+    #4b597a,
+    #2f4858
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "helvetica neue";
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 10px solid rgb(254, 255, 181);
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1), inset 0 0 0 2px rgb(70, 70, 70),
+    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%; /*pivots on the origin*/
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour-hand {
+  background: white;
+  height: 4px;
+}
+.minute-hand {
+  background: rgb(0, 0, 0);
+  height: 4px;
+}
+.second-hand {
+  background: rgb(149, 0, 0);
+  height: 2px;
+}
+
+.brand {
+  color: rgb(254, 255, 181);
+  text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 10%;
+  right: 38%;
+  font-size: 2.5rem;
+  z-index: 100;
+}
